@@ -75,7 +75,6 @@
         android:hint="@string/repeats"
         android:importantForAutofill="no"
         android:inputType="number"
-        android:maxLength="2"
         android:padding="16dp"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/phone_number"
@@ -130,7 +129,7 @@
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progress"
-        android:layout_width="125dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/blur"
@@ -165,13 +164,13 @@
         app:layout_constraintTop_toTopOf="@+id/telegram_icon" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/attack_screen"
+        android:id="@+id/work_screen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="blur,progress,attack,progress_text,close_attack,bomb1" />
+        app:constraint_referenced_ids="blur,progress,progress_title,progress_text,close_attack,task_icon" />
 
     <TextView
-        android:id="@+id/attack"
+        android:id="@+id/progress_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -181,7 +180,7 @@
         app:layout_constraintBottom_toTopOf="@+id/progress"
         app:layout_constraintEnd_toStartOf="@+id/blur"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bomb1" />
+        app:layout_constraintStart_toEndOf="@+id/task_icon" />
 
     <TextView
         android:id="@+id/progress_text"
@@ -196,46 +195,89 @@
         app:layout_constraintTop_toBottomOf="@+id/progress"
         tools:text="50/100" />
 
-    <ImageView
+    <TextView
         android:id="@+id/close_attack"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:text="@android:string/cancel"
+        android:textColor="?colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_close_24" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/repositoriesLoading"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:indeterminate="false"
+        android:padding="0dp"
+        android:translationX="8dp"
+        android:translationY="8dp"
+        app:indicatorColor="?colorPrimary"
+        app:indicatorSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bomb"
+        app:layout_constraintEnd_toEndOf="@+id/services_count"
+        app:trackColor="?colorPrimaryContainer"
+        app:trackThickness="14dp" />
 
     <TextView
         android:id="@+id/services_count"
-        android:layout_width="26dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/toggle_tile"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:gravity="center"
         android:padding="4dp"
         android:textColor="?android:colorBackground"
         android:textSize="11sp"
         android:translationX="4dp"
         android:translationY="4dp"
-        android:typeface="monospace"
         app:layout_constraintBottom_toBottomOf="@+id/bomb"
         app:layout_constraintEnd_toEndOf="@+id/bomb"
-        tools:text="61" />
+        tools:text="610" />
 
     <ImageView
-        android:id="@+id/bomb1"
+        android:id="@+id/task_icon"
         android:layout_width="18dp"
         android:layout_height="18dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="8dp"
         android:contentDescription="@null"
         app:layout_constraintBottom_toTopOf="@+id/progress"
-        app:layout_constraintEnd_toStartOf="@+id/attack"
+        app:layout_constraintEnd_toStartOf="@+id/progress_title"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/blur"
-        app:layout_constraintTop_toTopOf="@+id/attack"
+        app:layout_constraintTop_toTopOf="@+id/progress_title"
         app:srcCompat="@drawable/logo"
         app:tint="?colorControlNormal" />
+
+    <com.jetradarmobile.snowfall.SnowfallView
+        android:id="@+id/snowfall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:snowflakeAlphaMax="140"
+        app:snowflakeAlphaMin="70"
+        app:snowflakeAngleMax="5"
+        app:snowflakeImage="@drawable/snowflake"
+        app:snowflakeSizeMax="22dp"
+        app:snowflakeSizeMin="15dp"
+        app:snowflakeSpeedMax="3"
+        app:snowflakeSpeedMin="1"
+        app:snowflakesNum="50" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telegram_url"
+        tools:itemCount="5"
+        tools:listitem="@layout/story_preview_card" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

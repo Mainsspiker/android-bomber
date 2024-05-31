@@ -6,14 +6,13 @@
     <string name="phone_error">Нөмір пішімі қате</string>
 
     <string name="time_is_incorrect">Дұрыс көрсетілмеген уақыт</string>
-    <string name="no_scheduled_attacks">Жоспарланған шабуылдар жоқ</string>
+    <string name="scheduled_hint">Шабуылды жоспарлау үшін <b>«Шабуылды бастау»</b> түймесін басып тұрыңыз</string>
 
     <string name="donate">Қайырымдылық</string>
     <string name="proxy">Прокси</string>
     <string name="source_code">Дереккөз</string>
     <string name="waiting">Күту</string>
 
-    <string name="save">Сақтау</string>
     <string name="proxy_format_error">Прокси пішімі дұрыс емес</string>
     <string name="limit_reached">Шектеуге жетті</string>
 
@@ -23,4 +22,24 @@
 
     <string name="update_available">Жаңарту қолжетімді</string>
     <string name="download">Жүктеп алу</string>
+    <string name="update">Жаңарту</string>
+
+    <string name="enable_snowfall">Қар жаууды қосыңыз</string>
+    <string name="disable_snowfall">Қар жаууын өшіріңіз</string>
+
+    <string name="notification_permission">Қолданба параметрлерінен хабарландыру рұқсатын беріңіз</string>
+
+    <string name="apply">Қолдану</string>
+    <string name="services_warning">Қосымша қызметтерді қоспас бұрын, дереккөзді оқып шығу керек. Сақ болыңыз, қызметтерде бомбалаушының жұмысын бұзатын және құпия деректердің ашылуына әкелетін зиянды веб-сайттар болуы мүмкін. Бұл опция қосылған болса, қате туралы есептерді жібермеңіз</string>
+    <string name="enter_source">Дереккөз сілтемелерін енгізіңіз</string>
+    <string name="remote_services">Қашықтағы қызметтер</string>
+    <string name="call_centers">Байланыс орталықтары және кейінгі спам</string>
+    <string name="services">Қызметтер</string>
+
+    <string name="speed"><b>Шабуыл жылдамдығын реттеу</b>, жылдамдық неғұрлым жоғары болса, шабуылға соғұрлым аз уақыт кетеді</string>
+    <string name="slow">Баяу</string>
+    <string name="defaults">По умолчанию</string>
+    <string name="fast">Жылдам</string>
+
+    <string name="skip">Өткізіп жіберу (%1$dс)</string>
 </resources>

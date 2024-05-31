@@ -6,14 +6,13 @@
     <string name="phone_error">Неверный формат номера</string>
 
     <string name="time_is_incorrect">Неправильно указано время</string>
-    <string name="no_scheduled_attacks">Нет запланированных атак</string>
+    <string name="scheduled_hint">Зажмите кнопку <b>«Начать атаку»</b> чтобы запланировать атаку</string>
 
     <string name="donate">Пожертвование</string>
     <string name="proxy">Прокси</string>
     <string name="source_code">Исходный код</string>
     <string name="waiting">Ожидание</string>
 
-    <string name="save">Сохранить</string>
     <string name="proxy_format_error">Неверный формат прокси</string>
     <string name="limit_reached">Достигнут лимит</string>
 
@@ -23,4 +22,24 @@
 
     <string name="update_available">Доступно обновление</string>
     <string name="download">Скачать</string>
+    <string name="update">Обновление</string>
+
+    <string name="enable_snowfall">Включить снегопад</string>
+    <string name="disable_snowfall">Выключить снегопад</string>
+
+    <string name="notification_permission">Предоставьте разрешение на уведомления в настройках приложения</string>
+
+    <string name="apply">Применить</string>
+    <string name="services_warning">Прежде чем включить дополнительные сервисы вам придется ознакомиться с источником. Будьте внимательны, в сервисах могут быть вредоносные веб-сайты, которые могут нарушить работу бомбера и привести к раскрытию конфиденциальных данных. Не присылайте сообщения об ошибках, если у вас включена эта опция</string>
+    <string name="enter_source">Введите ссылки на источники</string>
+    <string name="remote_services">Сторонние сервисы</string>
+    <string name="call_centers">Колл-центры и последующий спам</string>
+    <string name="services">Сервисы</string>
+
+    <string name="speed"><b>Регулировка скорости атаки</b>, чем выше скорость тем меньше времени потребуется для атаки</string>
+    <string name="slow">Медленно</string>
+    <string name="defaults">По умолчанию</string>
+    <string name="fast">Быстро</string>
+
+    <string name="skip">Пропустить (%1$dс)</string>
 </resources>
